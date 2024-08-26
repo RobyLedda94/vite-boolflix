@@ -5,15 +5,15 @@ export default {
 </script>
 <template lang="">
     <header>
-        <div class="container">
+        <div class="container-full">
             <div class="row">
                 <div class="col-12 col-md-6">
-                    <div class="content-header">
+                    <div class="content-header my-3">
                         <h1>BOOLFLIX</h1>
                     </div>
                 </div>
                 <div class="col-12 col-md-6">
-                    <div class="content-header">
+                    <div class="content-header my-3">
                         <h1>SEARCH BAR</h1>
                     </div>
                 </div>

@@ -12,11 +12,18 @@ export default {
 }
 </script>
 <template lang="">
-    <div>
-        
+    <div class="container">
+        <div class="row">
+            <!-- devo ciclare l'array -->
+            <div class="col-12 col-md-3" v-for="(film, index) in store.listaFilms" :key="film.id">
+                <div class="content-main">
+                    Ciclo prova
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
-<style lang="">
-    
+<style lang="scss">
+
 </style>

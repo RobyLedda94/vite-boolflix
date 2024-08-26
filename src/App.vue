@@ -43,10 +43,16 @@ export default {
 </script>
 <template lang="">
   <AppHeader />
+  <main>
+    <FilmList />
+  </main>
 </template>
 
 
 <!-- importo il foglio di stile -->
 <style lang="scss">
-  @import './styles/general.scss'
+@import './styles/general.scss'
+
+
+  
 </style>
