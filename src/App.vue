@@ -1,10 +1,12 @@
 <script>
 // importo le componenti
-import AppHeader from './components/AppHeader.vue'
-import AppMain from './components/AppMain.vue'
-import FilmList from './components/FilmList.vue'
-import AppSearchFilms from './components/AppSearchFilms.vue'
+import AppHeader from './components/AppHeader.vue';
+import AppMain from './components/AppMain.vue';
+import FilmList from './components/FilmList.vue';
+import AppSearchFilms from './components/AppSearchFilms.vue';
 import { store } from './store.js'
+// importo axios per effettuare le chiamate
+import axios from 'axios';
 
 
 
@@ -20,10 +22,17 @@ export default {
   },
   // 
   created () {
-
+    // una volta definito il metodo devo richiamare getFilmList
+    this.getFilmList()
   },
+  // nel methods utilizzo axios
   methods: {
-
+    getFilmList(){
+      axios.get(store.apiUrl).then((result) => {
+        // recupero l'array vuoto da popolare a cui assegno 
+        store.listaFilms = result.data.results
+      });
+    }
   },
   data() {
     return {
@@ -33,13 +42,7 @@ export default {
 }
 </script>
 <template lang="">
-  <div class='container'>
-    <div class='row'>
-      <div class='col-12 col-md-4'>
-        
-      </div>
-    </div>
-  </div>
+
 </template>
 
 <style lang="">
