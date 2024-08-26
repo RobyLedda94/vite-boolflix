@@ -17,7 +17,16 @@ export default {
             <!-- devo ciclare l'array -->
             <div class="col-12 col-md-3" v-for="(film, index) in store.listaFilms" :key="film.id">
                 <div class="content-main">
-                    Ciclo prova
+                    <p>
+                        {{film.original_title}}
+                    </p>
+                    <p>
+                        {{film.original_language}}
+                    </p>
+                    <p>
+                        {{film.vote_average}}
+                    </p>
+                    
                 </div>
             </div>
         </div>
