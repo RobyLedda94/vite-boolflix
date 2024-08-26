@@ -29,7 +29,7 @@ export default {
   methods: {
     getFilmList(){
       axios.get(store.apiUrl).then((result) => {
-        // recupero l'array vuoto da popolare a cui assegno 
+        // recupero l'array vuoto da popolare a cui assegno i risultati della chiamata API
         store.listaFilms = result.data.results
       });
     }
@@ -42,9 +42,11 @@ export default {
 }
 </script>
 <template lang="">
-
+  <AppHeader />
 </template>
 
-<style lang="">
-  
+
+<!-- importo il foglio di stile -->
+<style lang="scss">
+  @import './styles/general.scss'
 </style>
