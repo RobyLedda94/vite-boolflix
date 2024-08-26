@@ -3,6 +3,7 @@
 import AppHeader from './components/AppHeader.vue'
 import AppMain from './components/AppMain.vue'
 import FilmList from './components/FilmList.vue'
+import AppSearchFilms from './components/AppSearchFilms.vue'
 import { store } from './store.js'
 
 
@@ -14,7 +15,15 @@ export default {
   components: {
     AppHeader,
     AppMain,
-    FilmList
+    FilmList,
+    AppSearchFilms
+  },
+  // 
+  created () {
+
+  },
+  methods: {
+
   },
   data() {
     return {
@@ -27,7 +36,7 @@ export default {
   <div class='container'>
     <div class='row'>
       <div class='col-12 col-md-4'>
-        {{store.msg}}
+        
       </div>
     </div>
   </div>
