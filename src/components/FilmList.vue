@@ -15,8 +15,8 @@ export default {
     <div class="container">
         <div class="row">
             <!-- devo ciclare l'array -->
-            <div class="col-12 col-md-3" v-for="(film, index) in store.listaFilms" :key="film.id">
-                <div class="content-main">
+            <div class="col-12 col-sm-6 col-lg-3" v-for="(film, index) in store.listaFilms" :key="film.id">
+                <div class="card-films p-2">
                     <p>
                         {{film.original_title}}
                     </p>
@@ -34,5 +34,6 @@ export default {
 </template>
 
 <style lang="scss">
+
 
 </style>

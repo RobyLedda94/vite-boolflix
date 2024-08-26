@@ -4,9 +4,8 @@
     box-sizing: border-box;
 }
 
+@import "../node_modules/bootstrap/scss/bootstrap";
+
 main {
     padding: 20px 0px
 }
-
-
-@import "../node_modules/bootstrap/scss/bootstrap";

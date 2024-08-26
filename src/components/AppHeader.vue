@@ -12,7 +12,7 @@ export default {
                         <h1>BOOLFLIX</h1>
                     </div>
                 </div>
-                <div class="col-12 col-md-6">
+                <div class="col-12 col-lg-6">
                     <div class="content-header my-3">
                         <h1>SEARCH BAR</h1>
                     </div>
