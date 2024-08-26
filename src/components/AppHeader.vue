@@ -1,14 +1,14 @@
 <script>
 export default {
-  
+    
 }
 </script>
 <template lang="">
-  <div>
-    
-  </div>
+    <header>
+        
+    </header>
 </template>
 
 <style lang="">
-  
+    
 </style>
