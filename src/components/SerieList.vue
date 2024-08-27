@@ -1,12 +1,12 @@
 <script>
 // importo lo store nella componenete SerieList
 import { store } from '../store.js'
-// importo la componenete AppSearchFilm
-import AppSearchFilms from './AppSearchFilms.vue';
+// importo la componenete AppSearchSeries
+import AppSearchSeries from './AppSearchFilms.vue';
 
 export default {
     components : {
-        AppSearchFilms,
+        AppSearchSeries,
     },
     data () {
         return {
@@ -19,8 +19,11 @@ export default {
 
 
 <template lang="">
-    <div>
-        
+    <div class="container">
+        <div class="row">
+            <!-- faccio il ciclo for su tutta la componenete -->
+            <AppSearchSeries v-for="(serie, index) in store.listaSerieTv" :key="serie.id" :SerieCard="serie"/>
+        </div>
     </div>
 </template>
 
