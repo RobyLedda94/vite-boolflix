@@ -30,9 +30,11 @@ export default {
   methods: {
     getFilmList(){
       // recupero dallo store l'array di stringhe di ricerca 
-      axios.get(store.apiUrl + store.searchContent).then((result) => {
+      axios.get(store.apiUrlfilm + store.searchContent).then((result) => {
         // recupero l'array vuoto da popolare a cui assegno i risultati della chiamata API
         store.listaFilms = result.data.results
+        console.log(store.listaFilms)
+        console.log(store.searchContent)
       });
     }
   },
