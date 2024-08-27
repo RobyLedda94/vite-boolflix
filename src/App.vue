@@ -22,19 +22,21 @@ export default {
     AppSearchFilms
   },
   // 
-  created () {
-    // una volta definito il metodo devo richiamare getFilmList
-    this.getFilmList()
-  },
+
   // nel methods utilizzo axios
   methods: {
     getFilmList(){
       // recupero dallo store l'array di stringhe di ricerca 
       axios.get(store.apiUrlfilm + store.searchContent).then((result) => {
         // recupero l'array vuoto da popolare a cui assegno i risultati della chiamata API
-        store.listaFilms = result.data.results
-        console.log(store.listaFilms)
-        console.log(store.searchContent)
+        store.listaFilms = result.data.results;
+        console.log(store.listaFilms);
+        console.log(store.searchContent);
+      });
+      // axios per chiamare l'API delle serie tv
+      axios.get(store.apiUrlserie + store.searchContent).then((result) => {
+        store.listaSerieTv = result.data.results;
+        console.log(store.listaSerieTv);
       });
     }
   },
