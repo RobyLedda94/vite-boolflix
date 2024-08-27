@@ -10,6 +10,7 @@ export default {
 <template lang="">
     <div class="col-12 col-sm-6 col-lg-3">
         <div class="card-serie p-2 my-2 text-center bg-light">
+            <img :src="`https://image.tmdb.org/t/p/w342/${SerieCard.poster_path}`" class="img-fluid">
             <p>
                 {{SerieCard.original_name}}
             </p>
@@ -24,7 +25,5 @@ export default {
 </template>
 
 <style lang="scss">
-.card-serie{
-    min-height: 200px;
-}
+
 </style>

@@ -51,9 +51,9 @@ export default {
 <template lang="">
   <AppHeader @search="getFilmList" />
   <main>
-    <h2>film</h2>
+    
     <FilmList />
-    <h2>serie</h2>
+    
     <SerieList />
   </main>
 </template>

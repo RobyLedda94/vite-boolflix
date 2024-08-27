@@ -22,6 +22,7 @@ export default {
     <div class="container">
         <div class="row">
             <!-- faccio il ciclo for su tutta la componenete -->
+            <h2 class="text-center my-3">SERIE</h2>
             <AppSearchSeries v-for="(serie, index) in store.listaSerieTv" :key="serie.id" :SerieCard="serie"/>
         </div>
     </div>
