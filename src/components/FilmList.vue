@@ -20,7 +20,7 @@ export default {
     <div class="container">
         <div class="row">
             <!-- faccio il ciclo for su tutta la componenete -->
-            <AppSearchFilms v-for="(film, index) in store.listaFilms" :key="film.id" :card="film"/>
+            <AppSearchFilms v-for="(film, index) in store.listaFilms" :key="film.id" :FilmCard="film"/>
         </div>
     </div>
 </template>

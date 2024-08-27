@@ -1,7 +1,8 @@
 <script>
 // importo le componenti
 import AppHeader from './components/AppHeader.vue';
-import AppMain from './components/AppMain.vue';
+import AppSearchSeries from './components/AppSearchSeries.vue';
+import SerieList from './components/SerieList.vue';
 import FilmList from './components/FilmList.vue';
 import AppSearchFilms from './components/AppSearchFilms.vue';
 // iporto store
@@ -17,7 +18,8 @@ export default {
   // utilizzo le componenti
   components: {
     AppHeader,
-    AppMain,
+    SerieList,
+    AppSearchSeries,
     FilmList,
     AppSearchFilms
   },
@@ -51,6 +53,7 @@ export default {
   <AppHeader @search="getFilmList" />
   <main>
     <FilmList />
+    <SerieList />
   </main>
 </template>
 

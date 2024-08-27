@@ -1,12 +1,12 @@
 <script>
+// importo lo store
+
 export default {
     
 }
 </script>
 <template lang="">
-    <main>
-        
-    </main>
+
 </template>
 
 <style lang="">
