@@ -2,7 +2,7 @@
 // importo lo store nella componenete SerieList
 import { store } from '../store.js'
 // importo la componenete AppSearchSeries
-import AppSearchSeries from './AppSearchFilms.vue';
+import AppSearchSeries from './AppSearchSeries.vue';
 
 export default {
     components : {

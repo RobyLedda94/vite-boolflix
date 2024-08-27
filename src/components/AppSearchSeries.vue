@@ -3,7 +3,7 @@
 
 export default {
     props : {
-        SerieCard: Object,
+        SerieCard: Object
     }
 }
 </script>
@@ -23,7 +23,7 @@ export default {
     </div>
 </template>
 
-<style lang="">
+<style lang="scss">
 .card-serie{
     min-height: 200px;
 }

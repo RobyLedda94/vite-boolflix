@@ -32,8 +32,7 @@ export default {
       axios.get(store.apiUrlfilm + store.searchContent).then((result) => {
         // recupero l'array vuoto da popolare a cui assegno i risultati della chiamata API
         store.listaFilms = result.data.results;
-        console.log(store.listaFilms);
-        console.log(store.searchContent);
+       
       });
       // axios per chiamare l'API delle serie tv
       axios.get(store.apiUrlserie + store.searchContent).then((result) => {
@@ -52,7 +51,9 @@ export default {
 <template lang="">
   <AppHeader @search="getFilmList" />
   <main>
+    <h2>film</h2>
     <FilmList />
+    <h2>serie</h2>
     <SerieList />
   </main>
 </template>

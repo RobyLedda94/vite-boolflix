@@ -13,6 +13,7 @@ export default {
         <div class="card-films p-2 my-2 text-center bg-light">
             <p>
                 {{FilmCard.original_title}}
+
             </p>
             <p>
                 {{FilmCard.original_language}}
