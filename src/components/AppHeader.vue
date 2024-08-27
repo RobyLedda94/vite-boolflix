@@ -25,7 +25,7 @@ export default {
     </header>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
     header{
         padding: 30px 0;
         background-color: black;

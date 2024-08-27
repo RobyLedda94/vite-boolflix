@@ -1,9 +1,14 @@
 <script>
 // importato lo store nel componenete FilmList.vue
 import { store } from '../store.js'
+// richiamo la componenete AppSearchFilms
+import AppSearchFilms from './AppSearchFilms.vue';
 
 
 export default {
+    components: {
+        AppSearchFilms
+    },
     data() {
         return{
             store,
@@ -14,25 +19,13 @@ export default {
 <template lang="">
     <div class="container">
         <div class="row">
-            <!-- devo ciclare l'array -->
-            <div class="col-12 col-sm-6 col-lg-3" v-for="(film, index) in store.listaFilms" :key="film.id">
-                <div class="card-films p-2 my-2 text-center bg-light">
-                    <p>
-                        {{film.original_title}}
-                    </p>
-                    <p>
-                        {{film.original_language}}
-                    </p>
-                    <p>
-                        {{film.vote_average}}
-                    </p>
-                </div>
-            </div>
+            <!-- faccio il ciclo for su tutta la componenete -->
+            <AppSearchFilms v-for="(film, index) in store.listaFilms" :key="film.id" :card="film"/>
         </div>
     </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 
 </style>
