@@ -1,6 +1,15 @@
 <script>
+// importo lo store
+
+import { store } from '../store.js';
+
 export default {
-    
+    data() {
+        
+        return {
+            store,
+        }
+    }
 }
 </script>
 <template lang="">
@@ -15,8 +24,10 @@ export default {
                 <div class="col-12 col-lg-6">
                     <div class="content-header my-3">
                         <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Ricerca film o serie tv" aria-label="Search">
-                            <button class="btn btn-outline-danger" type="submit">Search</button>
+                            <!-- eseguo la direttiva v-model per recuperare i valori inseriti nell'input -->
+                            <input class="form-control me-2" type="search" placeholder="Ricerca film o serie tv" v-model="store.searchContent" aria-label="Search">
+                            <!-- evento click sul bottone -->
+                            <button class="btn btn-outline-danger" type="submit" @click.prevent="$emit('search')">Search</button>
                         </form>
                     </div>
                 </div>

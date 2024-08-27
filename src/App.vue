@@ -4,6 +4,7 @@ import AppHeader from './components/AppHeader.vue';
 import AppMain from './components/AppMain.vue';
 import FilmList from './components/FilmList.vue';
 import AppSearchFilms from './components/AppSearchFilms.vue';
+// iporto store
 import { store } from './store.js'
 // importo axios per effettuare le chiamate
 import axios from 'axios';
@@ -28,7 +29,8 @@ export default {
   // nel methods utilizzo axios
   methods: {
     getFilmList(){
-      axios.get(store.apiUrl).then((result) => {
+      // recupero dallo store l'array di stringhe di ricerca 
+      axios.get(store.apiUrl + store.searchContent).then((result) => {
         // recupero l'array vuoto da popolare a cui assegno i risultati della chiamata API
         store.listaFilms = result.data.results
       });
@@ -42,7 +44,7 @@ export default {
 }
 </script>
 <template lang="">
-  <AppHeader />
+  <AppHeader @search="getFilmList" />
   <main>
     <FilmList />
   </main>
