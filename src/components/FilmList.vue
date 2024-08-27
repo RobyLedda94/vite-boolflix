@@ -16,7 +16,7 @@ export default {
         <div class="row">
             <!-- devo ciclare l'array -->
             <div class="col-12 col-sm-6 col-lg-3" v-for="(film, index) in store.listaFilms" :key="film.id">
-                <div class="card-films p-2">
+                <div class="card-films p-2 my-2 text-center bg-light">
                     <p>
                         {{film.original_title}}
                     </p>
@@ -26,7 +26,6 @@ export default {
                     <p>
                         {{film.vote_average}}
                     </p>
-                    
                 </div>
             </div>
         </div>

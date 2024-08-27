@@ -5,7 +5,7 @@ export default {
 </script>
 <template lang="">
     <header>
-        <div class="container-full">
+        <div class="container">
             <div class="row">
                 <div class="col-12 col-md-6">
                     <div class="content-header my-3">
@@ -14,7 +14,10 @@ export default {
                 </div>
                 <div class="col-12 col-lg-6">
                     <div class="content-header my-3">
-                        <h1>SEARCH BAR</h1>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Ricerca film o serie tv" aria-label="Search">
+                            <button class="btn btn-outline-danger" type="submit">Search</button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -32,3 +35,6 @@ export default {
     }
     
 </style>
+
+
+
