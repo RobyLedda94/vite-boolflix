@@ -37,13 +37,18 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-    header{
-        padding: 30px 0;
-        background-color: black;
-        h1 {
-            color: rgb(167, 16, 16);
-        }
-    }
+header {
+    position: fixed; /* Fissa l'header in cima */
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    padding: 20px 0; /* Ridotto il padding per adattare l'header fisso */
+    z-index: 1000; /* Assicura che l'header sia sopra altri contenuti */
+    color: white; /* Colore del testo dell'header */
+    display: flex; /* Usa flexbox per allineare il contenuto */
+    justify-content: center; /* Allinea il contenuto orizzontalmente */
+}
     
 </style>
 

@@ -11,6 +11,11 @@ export default {
             hover: false,
         };
     },
+    computed: {
+        stars () {
+            return Math.round(this.SerieCard.vote_average / 2);  
+        }
+    }
 }
 </script>
 <template lang="">
@@ -26,7 +31,10 @@ export default {
              <div  class="card-description" :class="{'show': hover}">
                 <p>{{SerieCard.original_name}}</p>
                 <p>{{SerieCard.original_language}}</p>
-                <p>{{SerieCard.vote_average}}</p>
+                <div class="content-stelle">
+                    <!-- Visualizzare le stelle basate sul rating -->
+                    <span v-for="n in 5" :key="n" class="star" :class="{ 'color': n <= stars }">★</span>
+                </div>
                 <p>{{SerieCard.overview}}</p>
              </div>
         </div>
@@ -50,6 +58,8 @@ export default {
     height: auto; 
     display: block; 
     transition: opacity 0.3s ease; 
+    height: 550px;
+    object-fit: cover;
 }
 
 .card-description {
@@ -78,6 +88,22 @@ export default {
 
 .card-serie:hover .content img {
     opacity: 0.3; 
+}
+
+ /* stelle stile*/
+.content-stelle {
+    display: flex;
+    margin: 5px 0;
+}
+
+.star {
+    font-size: 20px; 
+    color: gray; 
+    margin: 0 1px;
+}
+
+.star.color {
+    color: gold; 
 }
 
 

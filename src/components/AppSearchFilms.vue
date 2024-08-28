@@ -12,6 +12,11 @@ export default {
             hover: false,
         };
     },
+    computed: {
+        stars () {
+            return Math.round(this.FilmCard.vote_average / 2);
+        }
+    }
 }
 </script>
 <template lang="">
@@ -29,7 +34,10 @@ export default {
              <div  class="card-description" :class="{'show': hover}">
                 <p>{{FilmCard.original_title}}</p>
                 <p>{{FilmCard.original_language}}</p>
-                <p>{{FilmCard.vote_average}}</p>
+                <div class="content-stelle">
+                    <!-- Ciclo v-for per itero da 1 a 5 per generare le stelle -->
+                    <span v-for="n in 5" :key="n" class="star" :class="{ 'color': n <= stars }">★</span>
+                </div>
                 <p>{{FilmCard.overview}}</p>
              </div>
 
@@ -54,6 +62,8 @@ export default {
     height: auto; 
     display: block; 
     transition: opacity 0.3s ease; 
+    height: 550px;
+    object-fit: cover;
 }
 
 .card-description {
@@ -72,7 +82,7 @@ export default {
     justify-content: center;
     align-items: center;
     text-align: center;
-    overflow: auto; 
+    overflow-y: auto; 
     box-sizing: border-box; 
 }
 
@@ -82,5 +92,22 @@ export default {
 
 .card-films:hover .content img {
     opacity: 0.3; 
+}
+
+
+ /* stelle stile*/
+.content-stelle {
+    display: flex;
+    margin: 5px 0;
+}
+
+.star {
+    font-size: 20px; 
+    color: gray; 
+    margin: 0 1px;
+}
+
+.star.color {
+    color: gold; 
 }
 </style>
