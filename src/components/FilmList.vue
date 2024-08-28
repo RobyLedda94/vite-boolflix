@@ -27,6 +27,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-
+h2{
+    color: white;
+}
 
 </style>

@@ -31,6 +31,9 @@ export default {
 
 
 
-<style lang="">
-    
+<style lang="scss" scoped>
+h2{
+    color: white;
+}
+
 </style>

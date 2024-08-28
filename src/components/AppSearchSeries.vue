@@ -18,12 +18,12 @@ export default {
         <div class="card-serie my-2 text-center" @mouseover="hover = true" @mouseleave="hover = false">
             <!-- copertina + info base -->
              <!-- condizione v-if la varibile hover è falsa percio resta l'immagine -->
-            <div v-if="!hover" class="content">
+            <div class="content">
                 <img :src="`https://image.tmdb.org/t/p/w342/${SerieCard.poster_path}`" class="img-fluid">
             </div>
             <!-- descrizione -->
              <!-- se la condizione e vera compare la descrizione -->
-             <div v-if="hover" class="card-description">
+             <div  class="card-description" :class="{'show': hover}">
                 <p>{{SerieCard.original_name}}</p>
                 <p>{{SerieCard.original_language}}</p>
                 <p>{{SerieCard.vote_average}}</p>
@@ -33,8 +33,52 @@ export default {
     </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
+.card-serie {
+    position: relative; 
+    overflow: hidden;  
+    border-radius: 8px; 
+    cursor: pointer; 
+}
 
+.content {
+    position: relative; 
+}
+
+.content img {
+    width: 100%; 
+    height: auto; 
+    display: block; 
+    transition: opacity 0.3s ease; 
+}
+
+.card-description {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); 
+    color: white;
+    padding: 10px;
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: auto; 
+    box-sizing: border-box; 
+}
+
+.card-description.show {
+    opacity: 1; 
+}
+
+.card-serie:hover .content img {
+    opacity: 0.3; 
+}
 
 
 </style>
