@@ -36,7 +36,7 @@ export default {
                 <p>{{FilmCard.original_language}}</p>
                 <div class="content-stelle">
                     <!-- Ciclo v-for per itero da 1 a 5 per generare le stelle -->
-                    <span v-for="n in 5" :key="n" class="star" :class="{ 'color': n <= stars }">★</span>
+                    <div v-for="n in 5" :key="n" class="star my-3" :class="{ 'color': n <= stars }">★</div>
                 </div>
                 <p>{{FilmCard.overview}}</p>
              </div>
@@ -77,11 +77,6 @@ export default {
     padding: 10px;
     opacity: 0; 
     transition: opacity 0.3s ease; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     overflow-y: auto; 
     box-sizing: border-box; 
 }
@@ -98,6 +93,7 @@ export default {
  /* stelle stile*/
 .content-stelle {
     display: flex;
+    justify-content: center;
     margin: 5px 0;
 }
 
